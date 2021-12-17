@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>COVID-19 Vaccination Validation</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./font-awesome.min.css">
+  <link rel="stylesheet" href="./ionicons.min.css">
+  <link rel="stylesheet" href="./AdminLTE.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo" style="font-size:18px">  
+    <a href="#"><img src="batutLogo.png" width="100%" /></a><br><br>
+    <a href="#"><b>Цовид-19 вакцинација</b> Валидација</a><br>
+    <a href="#"><b>Covid-19 vakcinacija</b> Validacija</a><br>
+    <a href="#"><b>Covid-19 vaccination</b> Validation</a>
+  </div>
+  <div class="login-box-body">
+		<div class="alert alert-success" align="center">
+		<strong><span id="name-c"></span><BR>(<span id="name-l"></span>)</strong><BR>Име и презиме, Ime i prezime, Name and lastname<BR><BR>
+		Шифра потврде  <strong id="code1"></strong><BR>Потврда је ВАЛИДНА! <BR>
+		Šifra potvrde  <strong id="code2"></strong><BR>Potvrda je VALIDNA! <BR>
+		Confirmation code  <strong id="code3"></strong><BR>Report is VALID!
+	</div>
+  </div>
+</div>
+<script>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  document.getElementById("name-c").innerHTML = params.namec;
+  document.getElementById("name-l").innerHTML = params.namel;
+  document.getElementById("code1").innerHTML = params.code;
+  document.getElementById("code2").innerHTML = params.code;
+  document.getElementById("code3").innerHTML = params.code;
+</script>
+</body>
+</html>
+
